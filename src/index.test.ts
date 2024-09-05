@@ -2,11 +2,10 @@ import { deepEqual } from "node:assert/strict";
 import { test } from "node:test";
 
 const greet = (name: string) => {
-  let message = '';
+  //let message = '';
+  let message = `Welcome, ${name}!`; // One step less to do the initialisation directly
 
-  if (name.length !== 0) {
-    message = `Welcome, ${name}!`;
-  } else {
+  if (name.length === 0) {
     message = `Welcome whoever you're. I'm sure you've a name. Please provide it.`;
   }
 
